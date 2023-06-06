@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  cpu_stress:
+    build: .
+    command: ["stress-ng", "-c", "0", "-l", "100", "--vm", "1", "--vm-bytes", "1000M"]
+    cpus: 1
